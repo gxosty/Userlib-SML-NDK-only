@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.19.0)
 set(CIPHER_URL https://github.com/lukas0x1/SML-filehost/releases/latest/download/libciphered.so)
 set(CIPHER_PATH ${CMAKE_SOURCE_DIR}/includes/cipher/libciphered.so)
 
-if (NOT EXISTS CIPHER_PATH)
+if (NOT EXISTS ${CIPHER_PATH})
 	file(DOWNLOAD ${CIPHER_URL} ${CIPHER_PATH} STATUS LIBCIPHER_DOWNLOAD_STATUS)
 endif()
 
