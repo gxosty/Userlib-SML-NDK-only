@@ -9,11 +9,17 @@ typedef void (*func)();
 void Menu();
 void Init();
 
-extern "C"
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 func Start(){
     Init();
     return &Menu;
 }
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif //USERLIB_MAIN_H
