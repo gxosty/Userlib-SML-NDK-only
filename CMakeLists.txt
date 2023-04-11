@@ -3,7 +3,9 @@ set(CIPHER_URL https://github.com/lukas0x1/SML-filehost/releases/latest/download
 set(CIPHER_PATH ${CMAKE_SOURCE_DIR}/includes/cipher/libciphered.so)
 
 if (NOT EXISTS ${CIPHER_PATH})
+	message(STATUS "Downloading libciphered.so...")
 	file(DOWNLOAD ${CIPHER_URL} ${CIPHER_PATH} STATUS LIBCIPHER_DOWNLOAD_STATUS)
+	message(STATUS "Status: ${LIB_CIPHERED_DOWNLOAD_STATUS}")
 endif()
 
 ### Here starts set up of cross-compile variables ###
