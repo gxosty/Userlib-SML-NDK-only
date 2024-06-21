@@ -1,16 +1,25 @@
 //
-// Created by gxost on 19/03/2023.
+// Created by Lukas on 22/07/2022.
 //
 
 #include "main.h"
-#include "includes/cipher/Cipher.h"
-#include "includes/imgui/imgui.h"
-#include "includes/misc/Logger.h"
+#include "include/Cipher/Cipher.h"
+#include "include/imgui/imgui.h"
+#include "include/misc/Logger.h"
 
-void Menu() {
-	ImGui::Text("Hello SML!");
+
+
+// UI related functions
+void Menu(bool *_pOpen) { // _pOpen is passed by canvas. Used to close and open the mod locally
+    ImGui::Checkbox("Close me!", (bool *)(_pOpen));
 }
 
-void Init(){
+// Called in a later stage of game initialisation
+void InitLate() {
 
-};
+}
+
+// Called at the start of the game
+void Init() {
+
+}
